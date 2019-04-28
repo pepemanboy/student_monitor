@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="30dp">
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="sm logo"
+            app:srcCompat="@drawable/sm_logo" />
+
+        <EditText
+            android:id="@+id/editTextStudent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:autoText="false"
+            android:ems="10"
+            android:hint="Student ID"
+            android:inputType="textPersonName"
+            android:password="false"
+            android:phoneNumber="false"
+            android:text="Valeria"
+            android:textColorLink="@android:color/holo_orange_light" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Student password"
+            android:inputType="textPassword"
+            android:text="valeria" />
+
+        <EditText
+            android:id="@+id/editTextClassId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Class ID or QR code"
+            android:inputType="textPersonName"
+            android:text="sampleclass" />
+
+        <Button
+            android:id="@+id/connect_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Connect to class" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>
