@@ -1,0 +1,24 @@
+body {
+  padding-top: 5rem;
+}
+
+.sm-container {
+}
+
+.sm-login-container {
+	max-width: 400px;
+	margin: 0 auto;
+}
+
+.sm-login-button {
+	width: auto;
+}
+
+.sm-login-form-error
+{
+	color: #D9164A;
+}
+
+.sm-teacher-room{
+	margin-right: 10px;
+}
