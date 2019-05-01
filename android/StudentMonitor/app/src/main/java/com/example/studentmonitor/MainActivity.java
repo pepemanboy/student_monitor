@@ -25,9 +25,10 @@ public class MainActivity extends AppCompatActivity {
     Background background = null;
 
     // Commands
-    private static final int cmd_Idle = 0;
-    private static final int cmd_Initialize = 1;
-    private static final int cmd_Update = 2;
+    public static final int cmd_Idle = 0;
+    public static final int cmd_Initialize = 1;
+    public static final int cmd_PayingAttention = 2;
+    public static final int cmd_Distracted = 3;
 
     Context context;
     private static final String communicationUrl = "https://www.student-monitor.tk/sm/communication.php";
@@ -81,14 +82,20 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private boolean control(final int cmd)
+    public boolean control(final int cmd)
     {
         if(command != cmd_Idle)
             return false;
         switch (cmd)
         {
             case cmd_Initialize:
-                notifyStatus("sm");
+                notifyStatus("good");
+                break;
+            case cmd_Distracted:
+                notifyStatus("bad");
+                break;
+            case cmd_PayingAttention:
+                notifyStatus("good");
                 break;
         }
         command = cmd;
@@ -108,6 +115,11 @@ public class MainActivity extends AppCompatActivity {
                 }
                 break;
             }
+            case cmd_Distracted:
+            case cmd_PayingAttention:{
+                background.setAlarm();
+            }
+
         }
         command = cmd_Idle;
     }

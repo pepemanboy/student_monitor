@@ -33,6 +33,7 @@ if (!isset($_SESSION["user"]))
           <div class="row">      
             <button type="button" class="btn btn-warning sm-teacher-room" data-toggle="modal" data-target="#exampleModal">Show QR code</button>
             <button type="button" class="btn btn-warning sm-teacher-room">Broadcast question</button>
+            <button type="button" class="btn btn-warning sm-teacher-room" id = "sm-class-reset-button">Reset class</button>
             <a href="room.php"><button type="button" class="btn btn-secondary sm-teacher-room">Back to classes</button></a>
           </div>   
         </div>
@@ -48,8 +49,9 @@ if (!isset($_SESSION["user"]))
           <tr>
             <th scope="col">#</th>
             <th scope="col">Student</th>
-            <th scope="col">Cellphone time (min)</th>
-            <th scope="col">Assistance</th>
+            <th scope="col">Arrival</th>
+            <th scope="col">Attention time</th>
+            <th scope="col">Distracted time</th>
           </tr>
         </thead>
         <tbody>
@@ -57,25 +59,29 @@ if (!isset($_SESSION["user"]))
             <th scope="row">1</th>
             <td>Mark</td>
             <td>-</td>
-            <td>no</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
           <tr>
             <th scope="row">2</th>
             <td>Jacob</td>
             <td>-</td>
-            <td>no</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
           <tr>
             <th scope="row">3</th>
             <td>Larry</td>
             <td>-</td>
-            <td>no</td>
+            <td>-</td>
+            <td>-</td>
           </tr>
           <tr>
             <th scope="row">4</th>
             <td>Valeria</td>
-            <td>-</td>
-            <td>no</td>
+            <td id = "valeria-start">-</td>
+            <td id = "valeria-good">-</td>
+            <td id = "valeria-bad">-</td>
           </tr>
         </tbody>
       </table>
@@ -101,5 +107,7 @@ if (!isset($_SESSION["user"]))
   </div> <!-- Acaba container -->
   <!-- Footer -->
   <?php include "footer.php"; ?>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+  <script src = "js/class.js?v=45"> </script>
 </body>
 </html> 

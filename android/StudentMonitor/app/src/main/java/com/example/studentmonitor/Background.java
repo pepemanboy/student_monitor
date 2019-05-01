@@ -32,8 +32,6 @@ public class Background extends BroadcastReceiver {
     @Override
     public void onReceive(Context context, Intent intent)
     {
-        Toast.makeText(context, "Alarm Triggered", Toast.LENGTH_SHORT).show();
-
         // Check for device Locked
         boolean deviceLocked = false;
         KeyguardManager myKM = (KeyguardManager) context.getSystemService(Context.KEYGUARD_SERVICE);
@@ -56,10 +54,11 @@ public class Background extends BroadcastReceiver {
             Log.i("SM-Background", "Using other app: " + usingOtherApp);
         }catch(Exception ignore) {}
 
-        // TODO: Send online request
+        boolean payingAttention = !(usingOtherApp && !deviceLocked);
+        Log.i("SM-Background", "Paying attention: " + payingAttention);
+        ((MainActivity) this.context).control(payingAttention ? MainActivity.cmd_PayingAttention : MainActivity.cmd_Distracted);
 
-        // Re - set alarm
-        setAlarm();
+        // MainActivity handler will re-set alarm
     }
 
     public void setContext(Context context)

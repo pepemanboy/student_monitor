@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $r = ($user == "teacher" && $pass == "teacher");
     if ($r)
     {
-      $passErr = "exito";
+      $passErr = "Success!";
       $_SESSION["user"] = $user;
       echo("<meta http-equiv='refresh' content='0; url=teacher.php' />");
     }

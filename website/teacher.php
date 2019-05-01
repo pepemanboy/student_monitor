@@ -31,9 +31,9 @@ if (!isset($_SESSION["user"]))
             <p>Pick one of your rooms</p>
           </div>   
           <div class="row">
-            <a href="room.php"><button type="button" class="btn btn-warning sm-teacher-room">Computer Science 1</button></a>
-            <button type="button" class="btn btn-warning sm-teacher-room">Physics 3</button>
-            <button type="button" class="btn btn-warning sm-teacher-room">Biology 1</button>
+            <a href="room.php"><button type="button" class="btn btn-warning sm-teacher-room">Innovation, markets, and technological development</button></a>
+            <button type="button" class="btn btn-warning sm-teacher-room">Finances</button>
+            <button type="button" class="btn btn-warning sm-teacher-room">Business</button>
             <button type="button" class="btn btn-warning sm-teacher-room">+</button>
           </div>  
         </div>

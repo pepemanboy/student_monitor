@@ -1,11 +1,8 @@
 /**
  *	Log out
  */
-$("#logout-buton").click(function() {
-	$.post("modules/post.php", {
-			module: "user_control",
-			operation: "logout"
-		},
+$("#logout-button").click(function() {
+	$.post("logout.php", {},
 		function(data, status) {
 			window.location.replace("login.php");
 		});
