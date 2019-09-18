@@ -1,2 +1,3 @@
 # student_monitor
-Teacher - student app for school project.
+
+Simple prototype for an Android app to monitor cellphone usage during school classes.
